@@ -1240,6 +1240,517 @@ nav{
 }
 .head-shape-grid button:hover{transform:translateY(-2px);filter:brightness(1.15)}
 
+
+
+/* ===== تجاوز الثيم إلى أبيض (Light Mode) ===== */
+:root{
+ --accent:#00a2ff;
+ --accent2:#00b06f;
+ --danger:#e74c3c;
+ --bg-1:#f5f6f8;
+ --bg-2:#ffffff;
+ --bg-3:#ffffff;
+ --gold:#f7b500;
+ --txt:#1a1a1a;
+ --muted:#6b7280;
+ --shadow-lg:0 8px 24px rgba(0,0,0,.08);
+ --shadow-md:0 4px 12px rgba(0,0,0,.06);
+ --shadow-glow:0 0 24px rgba(0,162,255,.18);
+ --ease:cubic-bezier(.4,.0,.2,1);
+ --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+ --t-fast:.18s;
+ --t-mid:.32s;
+ --t-slow:.55s;
+}
+html,body{
+ background:linear-gradient(180deg,#fff 0%,#f5f6f8 100%)!important;
+ color:#1a1a1a!important;
+}
+button{transition:all var(--t-fast) var(--ease)!important}
+button:hover{transform:translateY(-2px);filter:brightness(1.05)}
+button:active{transform:translateY(0) scale(.97)!important;filter:brightness(.95)}
+
+/* ===== القائمة الرئيسية - خلفية بيضاء ===== */
+#scr-menu{
+ background:linear-gradient(180deg,#fff 0%,#f5f6f8 100%)!important;
+}
+nav{
+ background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.95) 100%)!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.04),0 1px 0 rgba(0,0,0,.04)!important;
+ border-bottom:1px solid #ececed!important;
+ backdrop-filter:blur(20px);
+}
+.nav-logo{
+ background:linear-gradient(135deg,#e2231a,#f7b500)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+ font-size:18px;font-weight:900;letter-spacing:.3px;
+}
+.ntab{
+ color:#6b7280!important;
+ background:transparent!important;
+ border-radius:10px;
+}
+.ntab:hover{
+ color:#1a1a1a!important;
+ background:rgba(0,0,0,.04)!important;
+}
+.ntab.sel{
+ color:#e2231a!important;
+ background:rgba(226,35,26,.08)!important;
+ box-shadow:none!important;
+}
+.ntab.sel::after{
+ background:#e2231a!important;
+ box-shadow:0 0 8px rgba(226,35,26,.6)!important;
+}
+.nav-user{
+ background:rgba(255,255,255,.7)!important;
+ border:1px solid #ececed!important;
+ box-shadow:0 1px 3px rgba(0,0,0,.04)!important;
+}
+#navCoins{
+ background:linear-gradient(135deg,#fff,#f5f6f8)!important;
+ color:#f7b500!important;
+ border:1px solid rgba(247,181,0,.3)!important;
+ box-shadow:0 2px 6px rgba(247,181,0,.12)!important;
+}
+#btnLogout{
+ background:transparent!important;
+ border:1px solid #e74c3c!important;
+ color:#e74c3c!important;
+ border-radius:8px;
+ font-weight:700;
+}
+#btnLogout:hover{
+ background:#e74c3c!important;
+ color:#fff!important;
+}
+
+/* ===== شاشة الدخول - بيضاء ===== */
+#scr-login{
+ background:radial-gradient(ellipse at top,#fff 0%,#f5f6f8 50%,#ececed 100%)!important;
+}
+.lg{
+ background:linear-gradient(160deg,#fff,#f5f6f8)!important;
+ color:#1a1a1a!important;
+ border-radius:20px;
+ box-shadow:0 20px 60px rgba(0,0,0,.12),0 0 0 1px rgba(0,0,0,.03)!important;
+}
+.lg h1{
+ background:linear-gradient(135deg,#e2231a,#f7b500,#1a1a1a)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+ font-size:28px;font-weight:900;
+}
+.lg .sub{color:#6b7280!important}
+.fld label{color:#6b7280!important;font-weight:700}
+.fld input{
+ background:linear-gradient(135deg,#fff,#f5f6f8)!important;
+ border:2px solid #ececed!important;
+ color:#1a1a1a!important;
+}
+.fld input:focus{
+ border-color:#00a2ff!important;
+ box-shadow:0 0 0 3px rgba(0,162,255,.12),0 4px 12px rgba(0,162,255,.1)!important;
+ background:#fff!important;
+}
+#btnLogin{
+ background:linear-gradient(135deg,#00b06f,#00945c)!important;
+ box-shadow:0 6px 18px rgba(0,176,111,.25)!important;
+}
+#btnReg{
+ background:linear-gradient(135deg,#fff,#eef0f3)!important;
+ color:#1a1a1a!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.06)!important;
+ border:1px solid #ececed!important;
+}
+
+/* ===== تبويبات الصفحات - بيضاء ===== */
+.tab-page{
+ color:#1a1a1a!important;
+ background:transparent!important;
+}
+.tab-page h2{
+ background:linear-gradient(135deg,#1a1a1a,#6b7280)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* ===== بطاقات المابات - بيضاء ===== */
+.cards{gap:14px}
+.mcard{
+ background:#fff!important;
+ border:1px solid #ececed!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.04)!important;
+ border-radius:14px;
+ overflow:hidden;
+ transition:all var(--t-mid) var(--ease-bounce)!important;
+}
+.mcard:hover{
+ transform:translateY(-4px);
+ box-shadow:0 12px 30px rgba(0,0,0,.08),0 0 0 1px rgba(0,162,255,.15)!important;
+ border-color:rgba(0,162,255,.3)!important;
+}
+.minfo{
+ background:#fff!important;
+ border-top:1px solid #ececed!important;
+}
+.mname{color:#1a1a1a!important;font-weight:700}
+.mby{color:#6b7280!important}
+.playBtn{
+ background:linear-gradient(135deg,#00b06f,#00945c)!important;
+ box-shadow:0 3px 10px rgba(0,176,111,.25)!important;
+ color:#fff;font-weight:700;
+}
+.miniBtn{
+ background:linear-gradient(135deg,#f5f6f8,#ececed)!important;
+ color:#1a1a1a!important;
+ border:1px solid #ececed!important;
+}
+.miniBtn.danger{
+ background:linear-gradient(135deg,#fee2e2,#fecaca)!important;
+ color:#dc2626!important;
+}
+.badge{
+ background:linear-gradient(135deg,#00a2ff,#0080cc)!important;
+}
+.script-badge{
+ background:linear-gradient(135deg,#9b59b6,#7d3c98)!important;
+}
+
+/* ===== الأفاتار - بيضاء ===== */
+.avPrevBox,.edbox{
+ background:#fff!important;
+ border:1px solid #ececed!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.04)!important;
+}
+.edbox h3{
+ color:#1a1a1a!important;
+ border-right-color:#00a2ff!important;
+}
+.sw{
+ border:2px solid transparent!important;
+ transition:all var(--t-fast) var(--ease-bounce)!important;
+}
+.sw.sel{
+ border-color:#1a1a1a!important;
+ box-shadow:0 0 0 2px #00a2ff,0 4px 12px rgba(0,162,255,.3)!important;
+}
+.shopIt{
+ background:#fff!important;
+ border:2px solid #ececed!important;
+}
+.shopIt.eq{
+ border-color:#00b06f!important;
+ background:linear-gradient(180deg,#f0fdf4,#dcfce7)!important;
+}
+.shopIt .nm{color:#1a1a1a!important}
+.shopIt .pr{color:#f7b500!important}
+.shopIt.owned .pr{color:#00b06f!important}
+
+/* ===== مصمم الملابس - أبيض ===== */
+.cloth-canvas-box,.cc-box{
+ background:#fff!important;
+ border:1px solid #ececed!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.04)!important;
+}
+.cc-box h3{color:#1a1a1a!important;border-right-color:#00a2ff!important}
+.cloth-types button,.cc-tools button{
+ background:#f5f6f8!important;
+ color:#1a1a1a!important;
+ border:1px solid #ececed!important;
+}
+.cloth-types button.sel,.cc-tools button.sel{
+ background:linear-gradient(135deg,#00a2ff,#0080cc)!important;
+ color:#fff!important;
+ border-color:#0080cc!important;
+}
+.cloth-item{
+ background:#fff!important;
+ border:2px solid #ececed!important;
+}
+.cloth-item.eq{
+ border-color:#00b06f!important;
+ background:linear-gradient(180deg,#f0fdf4,#dcfce7)!important;
+}
+
+/* ===== الباني - أبيض ===== */
+#scr-builder{background:#0a0a0a!important}
+#bldCv{background:#0a0a0a}
+#bTop{
+ background:rgba(20,22,25,.95)!important;
+}
+#bldName{
+ background:#1a1a1a!important;
+ color:#fff!important;
+ border-color:#3a3d41!important;
+}
+#bPal{
+ background:rgba(20,22,25,.96)!important;
+}
+.pbtn{
+ background:linear-gradient(135deg,#2b2d30,#1e2124)!important;
+ color:#eee!important;
+ border-right:3px solid transparent!important;
+}
+.pbtn.sel{
+ background:linear-gradient(135deg,#00a2ff,#0080cc)!important;
+ color:#fff!important;
+}
+#bColors .sw{border:2px solid transparent!important}
+#bColors .sw.sel{border-color:#fff!important}
+.bbtn{
+ background:linear-gradient(135deg,#3a3d41,#2a2c30)!important;
+ color:#fff!important;
+}
+.bbtn.grn{background:linear-gradient(135deg,#00945c,#007a4a)!important}
+.bbtn.blu{background:linear-gradient(135deg,#0080cc,#006699)!important}
+.bbtn.red{background:linear-gradient(135deg,#a93230,#8b2826)!important}
+
+/* ===== الأونلاين - أبيض ===== */
+.mp-box{
+ background:#fff!important;
+ border:1px solid #ececed!important;
+ border-right:3px solid #00a2ff!important;
+ box-shadow:0 2px 8px rgba(0,0,0,.04)!important;
+}
+.mp-box h3{
+ background:linear-gradient(135deg,#1a1a1a,#6b7280)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.mp-row input{
+ background:#fff!important;
+ border:2px solid #ececed!important;
+ color:#1a1a1a!important;
+}
+.mp-row input:focus{
+ border-color:#00a2ff!important;
+ box-shadow:0 0 0 3px rgba(0,162,255,.12)!important;
+}
+.mp-status{
+ background:#f5f6f8!important;
+ color:#6b7280!important;
+ border-right-color:#9ca3af!important;
+}
+.mp-status.on{color:#00b06f!important;border-right-color:#00b06f!important}
+.mp-status.err{color:#e74c3c!important;border-right-color:#e74c3c!important}
+.mp-player{
+ background:#f5f6f8!important;
+ color:#1a1a1a!important;
+ border-right-color:#00b06f!important;
+}
+.mp-player.host{
+ background:linear-gradient(135deg,#dbeafe,#bfdbfe)!important;
+ border-right-color:#00a2ff!important;
+}
+.mp-player .nm{color:#1a1a1a!important}
+
+/* ===== الشات - أبيض ===== */
+#chatPanel{
+ background:rgba(255,255,255,.96)!important;
+ border:1px solid #ececed!important;
+ box-shadow:0 12px 32px rgba(0,0,0,.1)!important;
+}
+#chatHeader{
+ background:linear-gradient(180deg,#fff,#f5f6f8)!important;
+ color:#1a1a1a!important;
+ border-bottom:1px solid #ececed!important;
+}
+#chatBody .msg{
+ background:#f5f6f8!important;
+ color:#1a1a1a!important;
+ border-left-color:#00a2ff!important;
+}
+#chatBody .msg.me{
+ background:#fef3c7!important;
+ border-left-color:#f7b500!important;
+}
+#chatBody .msg .who{color:#00a2ff!important}
+#chatBody .msg.me .who{color:#f7b500!important}
+#chatBody .sys{color:#6b7280!important}
+#chatInput{
+ background:#fff!important;
+ border-top:1px solid #ececed!important;
+}
+#chatInput input{
+ background:#f5f6f8!important;
+ color:#1a1a1a!important;
+ border:1px solid #ececed!important;
+}
+#chatInput button{
+ background:linear-gradient(135deg,#00a2ff,#0080cc)!important;
+ color:#fff!important;
+}
+#btnChat{
+ background:rgba(0,162,255,.85)!important;
+ color:#fff!important;
+ border-color:rgba(255,255,255,.6)!important;
+ box-shadow:0 4px 14px rgba(0,162,255,.4)!important;
+}
+
+/* ===== أدوات التحديد - بيضاء ===== */
+#bSelTools{
+ background:rgba(20,22,25,.96)!important;
+}
+.sel-row button,.sel-actions button{
+ color:#fff!important;
+}
+.sel-info{
+ color:#fff!important;
+}
+
+/* ===== محرر السكربتات - داكن (محار) ===== */
+.modal-box{
+ background:linear-gradient(180deg,#1e2024,#15181b)!important;
+ color:#eee!important;
+}
+.modal-box h2{
+ background:linear-gradient(135deg,#9b59b6,#00a2ff)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* ===== Toast - داكن ===== */
+#toast{
+ background:linear-gradient(135deg,#1a1a1a,#0a0a0a)!important;
+ color:#fff!important;
+}
+
+/* ===== إضافة: شريط التنقل السفلي بأسلوب Roblox ===== */
+#bottomNav{
+ position:fixed;bottom:0;left:0;right:0;
+ background:rgba(255,255,255,.96);
+ backdrop-filter:blur(20px);
+ -webkit-backdrop-filter:blur(20px);
+ border-top:1px solid #ececed;
+ display:flex;align-items:center;justify-content:space-around;
+ padding:8px 0 16px;z-index:30;
+ box-shadow:0 -4px 20px rgba(0,0,0,.04);
+}
+.nav-tab{
+ display:flex;flex-direction:column;align-items:center;gap:3px;
+ color:#9ca3af;font-size:10px;font-weight:600;
+ padding:6px 14px;border-radius:14px;cursor:pointer;
+ transition:all var(--t-fast) var(--ease);position:relative;
+ background:none;border:none;
+}
+.nav-tab svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none}
+.nav-tab.active{color:#e2231a}
+.nav-tab.active svg{stroke:#e2231a;fill:rgba(226,35,26,.08)}
+.nav-tab.active::after{
+ content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+ width:24px;height:3px;background:#e2231a;border-radius:2px;
+ box-shadow:0 0 8px rgba(226,35,26,.6);
+}
+.nav-tab:hover{color:#1a1a1a}
+.nav-tab:active{transform:scale(.92)}
+
+/* شريط التنقل السفلي - مخفي افتراضياً، يظهر فقط في القائمة */
+#bottomNav{display:none!important}
+#scr-menu.on ~ #bottomNav{display:flex!important}
+
+/* ضبط المسافة في tab-page بسبب شريط التنقل السفلي */
+.tab-page{bottom:60px!important;padding-bottom:80px!important}
+
+/* ===== Featured Card - بطاقة مميزة بأسلوب Roblox ===== */
+.featured-card{
+ margin:8px 0 14px;
+ background:linear-gradient(135deg,#e2231a 0%,#a01810 100%);
+ border-radius:16px;
+ padding:14px 16px;
+ color:#fff;position:relative;overflow:hidden;
+ box-shadow:0 8px 20px rgba(226,35,26,.25);
+ cursor:pointer;
+ transition:transform var(--t-fast);
+}
+.featured-card:hover{transform:translateY(-3px)}
+.featured-card:active{transform:scale(.98)}
+.featured-card::before{
+ content:'';position:absolute;top:-30px;right:-30px;
+ width:120px;height:120px;border-radius:50%;
+ background:rgba(255,255,255,.1);
+}
+.featured-card::after{
+ content:'';position:absolute;bottom:-40px;left:-20px;
+ width:100px;height:100px;border-radius:50%;
+ background:rgba(255,255,255,.08);
+}
+.featured-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.85;margin-bottom:4px;position:relative;z-index:2}
+.featured-title{font-size:18px;font-weight:800;margin-bottom:6px;position:relative;z-index:2}
+.featured-desc{font-size:12px;opacity:.9;line-height:1.4;position:relative;z-index:2}
+.featured-btn{
+ position:relative;z-index:2;
+ display:inline-flex;align-items:center;gap:5px;
+ background:#fff;color:#e2231a;
+ padding:7px 14px;border-radius:14px;
+ font-size:12px;font-weight:700;margin-top:8px;
+ box-shadow:0 4px 12px rgba(0,0,0,.15);border:none;
+ cursor:pointer;
+}
+
+/* ===== قسم الأصدقاء - Roblox style ===== */
+.friends-scroll{
+ display:flex;gap:14px;padding:4px 0 12px;overflow-x:auto;
+ scrollbar-width:none;
+}
+.friends-scroll::-webkit-scrollbar{display:none}
+.friend-item{
+ display:flex;flex-direction:column;align-items:center;gap:5px;
+ width:72px;flex-shrink:0;
+ cursor:pointer;
+ transition:transform var(--t-fast);
+}
+.friend-item:hover{transform:translateY(-2px)}
+.friend-item:active{transform:scale(.95)}
+.friend-avatar{
+ width:64px;height:64px;border-radius:50%;
+ background:linear-gradient(135deg,#f0f0f0,#e0e0e0);
+ display:flex;align-items:center;justify-content:center;
+ font-size:28px;
+ border:3px solid #fff;
+ box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+.friend-add{
+ background:linear-gradient(135deg,#fff,#f5f6f8)!important;
+ color:#00a2ff!important;
+ border:3px dashed #00a2ff!important;
+ font-size:24px;
+}
+.friend-name{
+ font-size:11.5px;font-weight:600;color:#6b7280;
+ text-align:center;max-width:72px;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ضبط nav-tabs للتنقل السفلي بدلاً من العلوي */
+.nav-tabs{display:none!important}
+
+/* تحسين الـ select و inputs في الأبيض */
+select{
+ background:#fff!important;
+ color:#1a1a1a!important;
+ border:2px solid #ececed!important;
+}
+select:focus{border-color:#00a2ff!important}
+
+/* تحسين الـ pub-banner */
+.pub-banner{
+ background:linear-gradient(135deg,rgba(0,162,255,.08),rgba(0,128,204,.04))!important;
+ border:1px solid rgba(0,162,255,.2)!important;
+ border-right:4px solid #00a2ff!important;
+}
+.pub-banner h3{
+ background:linear-gradient(135deg,#00a2ff,#9b59b6)!important;
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.pub-card{
+ background:#fff!important;
+ border:1px solid rgba(0,162,255,.2)!important;
+ border-right:4px solid #00a2ff!important;
+}
+
+/* تحسين الإعدادات */
+#settingsPanel,#btnSettings{
+ background:rgba(20,22,25,.96)!important;
+}
+
 </style>
 </head>
 <body>
@@ -1270,16 +1781,73 @@ nav{
     </div>
     <div class="nav-user"><span id="navCoins">🪙 0</span><span id="navUser"></span><button id="btnLogout">خروج</button></div>
   </nav>
-  <div class="tab-page" id="tab-home">
-    <h2>🗺 اختر ماب والعب!</h2>
-    <div id="mapGrid" class="cards"></div>
+  <div class="tab-page" id="tab-home" style="display:block">
+    <!-- الملف الشخصي -->
+    <div class="profile-row" style="display:flex;align-items:center;gap:12px;padding:14px 16px 10px">
+      <div class="avatar-circle" id="homeAvatar" style="width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#f7b500,#e74c3c);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#fff;border:3px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.1),0 0 0 1px #ececed;flex-shrink:0">B</div>
+      <div class="profile-info" style="flex:1;min-width:0">
+        <div class="profile-name" id="homeUserName" style="font-size:17px;font-weight:700;color:#1a1a1a"></div>
+        <div class="profile-status" style="font-size:12px;color:#6b7280;margin-top:2px;display:flex;align-items:center;gap:6px">
+          <span class="online-dot" style="width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px rgba(34,197,94,.6)"></span>
+          <span id="homeCoins">🪙 0</span>
+        </div>
+      </div>
+      <button class="miniBtn" id="btnLogout2" style="padding:8px 14px">خروج</button>
+    </div>
     
-    <div class="pub-section">
-      <h2>🌐 ألعاب منشورة — العب مع اللاعبين</h2>
-      <div id="pubGrid" class="cards">
-        <div class="empty" style="grid-column:1/-1">ما في ألعاب منشورة بعد — انشر مابك من الباني! 🚀</div>
+    <!-- بطاقة مميزة -->
+    <div class="featured-card" onclick="startGame(BUILTIN[0],{idx:0})">
+      <div class="featured-label">⭐ مميز اليوم</div>
+      <div class="featured-title">🟥 تحدي الأوبي الكلاسيكي</div>
+      <div class="featured-desc">اجمع العملات، تجاوز اللافا، واصل لخط النهاية!</div>
+      <button class="featured-btn">▶ العب الآن</button>
+    </div>
+    
+    <!-- قسم الغرف الأونلاين -->
+    <div class="section" style="padding:6px 0 4px">
+      <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px">
+        <div class="section-title" style="font-size:17px;font-weight:700;color:#1a1a1a">🌍 الغرف الأونلاين</div>
+        <button class="section-arrow" onclick="switchTab('online')" style="background:none;border:none;color:#6b7280;font-size:18px;cursor:pointer">›</button>
+      </div>
+      <div class="friends-scroll" style="padding:4px 14px 12px">
+        <div class="friend-item" onclick="switchTab('online')">
+          <div class="friend-avatar friend-add">+</div>
+          <div class="friend-name">غرفة جديدة</div>
+        </div>
+        <div class="friend-item" onclick="switchTab('online')">
+          <div class="friend-avatar">🎮</div>
+          <div class="friend-name">انضم</div>
+        </div>
       </div>
     </div>
+    
+    <!-- الألعاب المدمجة -->
+    <div class="section" style="padding:6px 0 4px">
+      <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px">
+        <div class="section-title" style="font-size:17px;font-weight:700;color:#1a1a1a">🗺 ألعاب جاهزة</div>
+      </div>
+      <div id="mapGrid" class="cards"></div>
+    </div>
+    
+    <!-- ألعاب منشورة -->
+    <div class="section" style="padding:14px 0 4px">
+      <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px">
+        <div class="section-title" style="font-size:17px;font-weight:700;color:transparent;background:linear-gradient(135deg,#00a2ff,#9b59b6);-webkit-background-clip:text;background-clip:text">🚀 ألعاب منشورة</div>
+      </div>
+      <div id="pubGrid" class="cards">
+        <div class="empty" style="grid-column:1/-1;color:#6b7280;font-size:14px;padding:20px;text-align:center">🎯 ما في ألعاب منشورة بعد — انشر مابك من تبويب 🛠 إنشاء ماب! 🚀</div>
+      </div>
+    </div>
+    
+    <!-- ماباتي -->
+    <div class="section" style="padding:14px 0 4px">
+      <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px">
+        <div class="section-title" style="font-size:17px;font-weight:700;color:#1a1a1a">📂 ماباتي</div>
+        <button class="section-arrow" onclick="switchTab('create')" style="background:none;border:none;color:#6b7280;font-size:18px;cursor:pointer">›</button>
+      </div>
+      <div id="homeMyMaps" class="cards"></div>
+    </div>
+    
   </div>
   <div class="tab-page" id="tab-avatar" style="display:none">
     <h2>🧍 خصّص شخصيتك</h2>
@@ -1405,7 +1973,31 @@ nav{
 </div>
 
 <!-- ===== شاشة اللعبة ===== -->
-<div id="scr-game" class="screen">
+<!-- شريط التنقل السفلي -->
+  <div id="bottomNav">
+    <button class="nav-tab active" data-nav="home" onclick="switchTab('home')">
+      <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h4v-6h6v6h4V10"/></svg>
+      الرئيسية
+    </button>
+    <button class="nav-tab" data-nav="search" onclick="showToast('استخدم التبويبات بالأعلى')">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      بحث
+    </button>
+    <button class="nav-tab" data-nav="avatar" onclick="switchTab('avatar')">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      الأفاتار
+    </button>
+    <button class="nav-tab" data-nav="create" onclick="switchTab('create')">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+      إنشاء
+    </button>
+    <button class="nav-tab" data-nav="online" onclick="switchTab('online')">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10z"/></svg>
+      أونلاين
+    </button>
+  </div>
+  
+  <div id="scr-game" class="screen">
   <canvas id="gameCv"></canvas>
   <div id="hud">
     <div id="stats">🪙 <span id="gCoins">0</span>/<span id="gTotal">0</span> &nbsp; 💀 <span id="gDeaths">0</span></div>
@@ -1567,7 +2159,22 @@ try{maps=JSON.parse(localStorage.getItem(KM))||{}}catch(e){maps={}}
 const saveUsers=()=>localStorage.setItem(KU,JSON.stringify(users));
 const saveMaps=()=>localStorage.setItem(KM,JSON.stringify(maps));
 const defSkin=()=>({head:'#f5cd30',torso:'#0d69ac',arms:'#f5cd30',legs:'#75b94e',hat:'none',face:'classic'});
-function loginDone(n){user=users[n];curName=n;localStorage.setItem(KS,n);enterMenu();}
+function loginDone(n){
+ user=users[n];curName=n;localStorage.setItem(KS,n);
+ // ابدأ اللعبة مباشرة بعد تسجيل الدخول
+ setTimeout(()=>{
+  try{
+   if(typeof BUILTIN!=='undefined'&&BUILTIN.length>0){
+    updateNav();
+    if(typeof updateHomeUserInfo==='function')updateHomeUserInfo();
+    if(typeof renderCards==='function')renderCards();
+    if(typeof renderMyMaps==='function')renderMyMaps();
+    if(typeof renderPubGrid==='function')renderPubGrid();
+    startGame(BUILTIN[0],{idx:0});
+   }else{enterMenu();}
+  }catch(e){console.warn('login start err',e);enterMenu();}
+ },100);
+}
 function doRegister(n,p){n=n.trim();
  if(n.length<3||p.length<3){$('lgErr').textContent='الاسم وكلمة المرور: 3 أحرف على الأقل!';return}
  if(users[n]){$('lgErr').textContent='اسم المستخدم موجود مسبقاً!';return}
@@ -4313,6 +4920,55 @@ const _origDeselectBlock=deselectBlock;
 deselectBlock=function(){
  _origDeselectBlock();
  renderSelColors();
+};
+
+
+/* ================= شريط التنقل السفلي ================= */
+function updateBottomNav(tab){
+ document.querySelectorAll('.nav-tab').forEach(b=>{
+  b.classList.toggle('active',b.dataset.nav===tab);
+ });
+}
+const _origSwitchTabNav=switchTab;
+switchTab=function(t){
+ _origSwitchTabNav(t);
+ updateBottomNav(t);
+};
+function updateHomeUserInfo(){
+ if($('homeUserName'))$('homeUserName').textContent=curName||'';
+ if($('homeCoins'))$('homeCoins').textContent='🪙 '+(user?user.coins:0);
+ if($('homeAvatar')){
+  const first=curName?curName[0].toUpperCase():'B';
+  $('homeAvatar').textContent=first;
+ }
+}
+function renderHomeMyMaps(){
+ const g=$('homeMyMaps');if(!g)return;
+ g.innerHTML='';
+ if(!maps){return;}
+ const mine=Object.values(maps).filter(m=>m.author===curName);
+ mine.forEach(m=>g.appendChild(makeCard(m,false,-1)));
+ if(!mine.length){
+  const e=document.createElement('div');e.className='empty';
+  e.style.gridColumn='1/-1';
+  e.textContent='🎯 ما عندك مابات بعد — اضغط على إنشاء ماب!';
+  g.appendChild(e);
+ }
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ if($('btnLogout2')){
+  $('btnLogout2').onclick=()=>{
+   if(!confirm('هل أنت متأكد من تسجيل الخروج؟\\nاضغط موافق لتسجيل الخروج، أو إلغاء للبقاء.'))return;
+   user=null;curName='';localStorage.removeItem(KS);$('inPass').value='';$('lgErr').textContent='';showScreen('login');
+  };
+ }
+});
+const _origEnterMenuNav=enterMenu;
+enterMenu=function(){
+ _origEnterMenuNav();
+ updateHomeUserInfo();
+ renderHomeMyMaps();
+ updateBottomNav('home');
 };
 
 /* استئناف الجلسة */
